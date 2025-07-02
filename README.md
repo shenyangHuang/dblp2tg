@@ -1,5 +1,5 @@
 # 1. DBLP Parser
-A simple python script for parsing DBLP dataset
+A simple python script for parsing DBLP dataset into temporal graphs
 
 
 ## 1.1. Table of content
@@ -19,13 +19,18 @@ A simple python script for parsing DBLP dataset
 - [6. Coming soon](#6-coming-soon)
 - [7. Disclaimer](#7-disclaimer)
 
-# 2. Set up
+# 2. Installation with uv [Andy]
 
-From your terminal run:
 ```bash
-git clone https://github.com/angelosalatino/dblp-parser.git
-cd dblp-parser
-pip install -r requirements.txt
+uv venv dblp_env --python 3.10 && source dblp_env/bin/activate
+
+pip3 install uv
+
+uv pip install -r requirements.txt
+
+uv pip install "numpy<2.0"
+
+uv pip install requests
 ```
 
 In order to work, it is important to download both the DBLP dump (dblp.xml.gz and unzip it) and the DTD file (dblp.dtd).

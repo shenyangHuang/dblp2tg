@@ -83,8 +83,7 @@ class DBLP:
         """
         filename = "dblp.dtd"
         url = "https://dblp.uni-trier.de/xml/dblp.dtd"
-        self.__download_file(url, filename)
-        
+        self.__download_file(url, filename)        
         self.__log_msg(f"DTD downloaded from {url}.")
         
 

@@ -1,0 +1,6 @@
+*.xml
+*.gz
+*.dtd
+*.json
+*.jsonl
+*.cpython-*
