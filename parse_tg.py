@@ -9,12 +9,15 @@ def parse_by_year(year):
     dblp = DBLP()
     dblp_path = "dblp.xml"
     save_path = f"dblp_{year}.jsonl"
-    dblp.parse_by_year(str(year), dblp_path, save_path)
+
+    features = {"title", "author", "year", "cite"}
+
+    dblp.parse_by_year(str(year), dblp_path, save_path, features_to_extract=features, include_key_and_mdate=True)
     
 
 def main():
     # parse_latest()
-    parse_by_year(2024)
+    parse_by_year(2020)
     
 
 if __name__ == "__main__":

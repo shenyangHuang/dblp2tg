@@ -375,6 +375,7 @@ class DBLP:
 
         attributes = self.__init_features(features_to_extract, attributes)
 
+
         for sub_element in elements:
             if sub_element.tag not in features_to_extract:
                 continue
@@ -459,6 +460,8 @@ class DBLP:
 
         features_to_extract = self.__check_features(features_to_extract)
 
+        print (features_to_extract)
+
 
 
         root = self.__open_dblp_file(dblp_path)
@@ -479,7 +482,6 @@ class DBLP:
                             file.write(json.dumps(attrib_values) + '\n')
 
                     self.__clear_element(element)
-
             file.close()
 
             self.__log_msg("Parsing all. Finished.")
